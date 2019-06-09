@@ -1,0 +1,4 @@
+avrdude -c stk500v2 -P /dev/ttyACM0 -p attiny85 -U flash:w:bootloader.hex:i -U lfuse:w:0xe1:m -U hfuse:w:0xde:m -U efuse:w:0xfe:m -B 20
+avrdude -c stk500v2 -P /dev/ttyACM0 -p attiny85 -D -U flash:w:main_urc.hex:i -B 20
+#E:FE, H:DE, L:E1
+
